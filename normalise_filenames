@@ -1,10 +1,14 @@
-#!/bin/bash
-# bash "strict mode" : http://redsymbol.net/articles/unofficial-bash-strict-mode
-set -euo pipefail
-IFS=$'\n\t'
-
-echo "==> converting all filenames to lowercase"
-./all_filenames_to_lowercase
+#!/usr/bin/env python
+import os
+import glob
 
 echo "==> converting all .txt to .md"
-./all_txt_to_md
+for filename in glob.glob("*.txt"):
+    basename = os.path.splitext(filename)[0]
+    new_name = basename + ".md"
+    os.rename(filename, new_name)
+
+echo "==> converting all filenames to lowercase"
+for filename in os.listdir(os.curdir):
+    # TODO: exclude [".git", "README.md"]
+    os.rename(filename, filename.lower())
