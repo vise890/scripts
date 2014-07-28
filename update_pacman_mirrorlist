@@ -1,0 +1,10 @@
+#!/bin/bash
+# bash "strict mode" : http://redsymbol.net/articles/unofficial-bash-strict-mode
+set -euo pipefail
+IFS=$'\n\t'
+
+# just for arch linux...
+
+echo "==> updating pacman's mirrorlist with newly ranked mirrors"
+reflector --verbose -l 200 -p http --sort rate --save /etc/pacman.d/mirrorlist
+
