@@ -1,0 +1,6 @@
+#!/bin/bash
+# bash "strict mode" : http://redsymbol.net/articles/unofficial-bash-strict-mode
+set -euo pipefail
+IFS=$'\n\t'
+
+for f in *.txt; do mv "$f" "${f/.txt/.md}"; done
