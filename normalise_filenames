@@ -2,13 +2,23 @@
 import os
 import glob
 
-echo "==> converting all .txt to .md"
+print("==> converting .txt to .md")
+
 for filename in glob.glob("*.txt"):
+
+    if filename in ["todo.txt"]:
+        continue
+
     basename = os.path.splitext(filename)[0]
     new_name = basename + ".md"
     os.rename(filename, new_name)
 
-echo "==> converting all filenames to lowercase"
-for filename in os.listdir(os.curdir):
-    # TODO: exclude [".git", "README.md"]
-    os.rename(filename, filename.lower())
+
+print("==> converting filenames to lowercase")
+
+for entry in os.listdir(os.curdir):
+
+    if entry in [".git", "README.md"]:
+        continue
+
+    os.rename(entry, entry.lower())
