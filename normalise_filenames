@@ -3,5 +3,8 @@
 set -euo pipefail
 IFS=$'\n\t'
 
+echo "==> converting all filenames to lowercase"
 ./all_filenames_to_lowercase
+
+echo "==> converting all .txt to .md"
 ./all_txt_to_md
