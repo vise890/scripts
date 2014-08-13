@@ -1,24 +1,20 @@
 #!/usr/bin/env python
 import os
 import glob
+import re
 
 print("==> converting .txt to .md")
-
 for filename in glob.glob("*.txt"):
-
     if filename in ["todo.txt"]:
         continue
-
     basename = os.path.splitext(filename)[0]
     new_name = basename + ".md"
     os.rename(filename, new_name)
 
 
-print("==> converting filenames to lowercase")
-
+print("==> converting filenames to lowercase, spaces to _")
 for entry in os.listdir(os.curdir):
-
     if entry in [".git", "README.md"]:
         continue
-
-    os.rename(entry, entry.lower())
+    new_entry = re.sub('\s', '_', entry).lower()
+    os.rename(entry, new_entry)
