@@ -1,0 +1,17 @@
+#!/bin/bash
+# Call this script with one parameter
+# sh git_update_submodule foo
+set -euo pipefail
+IFS=$'\n\t'
+
+CWD=$(pwd)
+SUBMODULE_PATH=$1
+
+echo "==> fetching submodule and merging with origin/master"
+cd $SUBMODULE_PATH
+git fetch
+git merge origin/master
+
+echo "==> staging changes to submodule"
+cd $CWD
+git add $SUBMODULE_PATH
