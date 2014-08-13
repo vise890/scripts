@@ -1,1 +1,3 @@
 (A) move all notes/snippets into here
+preserve mixed case or fully uppercase tokens in renaming
+don't touch .files
