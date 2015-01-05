@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+ORG_PATH = ENV['ORGPATH'] || ENV['ORG_PATH']
+EDITOR = ENV['EDITOR']
+
+JOURNAL_PATH = "#{ORG_PATH}/journal/"
+
+todays_journal_title = "#{Time.now.strftime("%Y%m%d")}.md"
+
+todays_journal_path = JOURNAL_PATH + todays_journal_title
+
+system "#{EDITOR} #{todays_journal_path}"
