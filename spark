@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
-ORG_PATH = ENV['ORGPATH'] || ENV['ORG_PATH']
-EDITOR = ENV['EDITOR']
+require './variables.rb'
 
 system "#{EDITOR} #{ORG_PATH}/SPARKFILE.md"
 
