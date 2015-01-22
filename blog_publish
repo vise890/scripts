@@ -1,0 +1,20 @@
+#!/bin/bash
+
+cwd=$(pwd)
+
+blog_path="$CODEPATH/vise890.github.io"
+
+
+cd "$blog_path"
+
+echo "==> compiling _pages"
+harp compile _pages ./
+
+echo "==> committing all changes"
+git add .
+git commit -m "update blog"
+
+echo "==> pushing all changes"
+git push
+
+cd "$cwd"
