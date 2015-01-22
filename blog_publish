@@ -2,13 +2,13 @@
 
 cwd=$(pwd)
 
-blog_path="$CODEPATH/vise890.github.io"
+compiled_blog_path="$CODEPATH/vise890.github.io"
+blog_path="$ORGPATH/blog"
 
-
-cd "$blog_path"
+cd "$compiled_blog_path"
 
 echo "==> compiling _pages"
-harp compile _pages ./
+harp compile "$blog_path" ./
 
 echo "==> committing all changes"
 git add .
