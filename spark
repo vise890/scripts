@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require './variables.rb'
+require_relative './variables.rb'
 
 system "#{EDITOR} #{ORG_PATH}/SPARKFILE.md"
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require './variables.rb'
+require_relative './variables.rb'
 
 JOURNAL_PATH = "#{ORG_PATH}/journal/"
 
