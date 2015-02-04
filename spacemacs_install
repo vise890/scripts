@@ -1,0 +1,8 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+cd ~
+mv .emacs.d .emacs.bak || true
+
+git clone --recursive http://github.com/syl20bnr/spacemacs ~/.emacs.d
