@@ -18,3 +18,6 @@ The `$ORGPATH` points to a directory structured like this:
 ├── journal # just a dir
 └── todo # the todo.txt dir
 ```
+
+You may also want to run a `bundle install` to get rubygems that some of the
+scripts use.

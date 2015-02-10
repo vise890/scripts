@@ -1,4 +1,12 @@
 #!/usr/bin/env ruby
 
 require 'securerandom'
-puts SecureRandom.hex
+
+require 'clipboard'
+
+pass = SecureRandom.hex
+
+puts pass
+
+Clipboard.copy pass
+puts "==> Password copied to clipboard"
