@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cp ~/.emacs.d/core/templates/.spacemacs.template $CODEPATH/dotfiles/spacemacs/.spacemacs
