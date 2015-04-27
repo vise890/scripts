@@ -4,7 +4,7 @@ require 'securerandom'
 
 require 'clipboard'
 
-pass = SecureRandom.hex
+pass = `pwgen -1 --ambiguous --capitalize --numerals --secure --symbols 15`
 
 puts pass
 
