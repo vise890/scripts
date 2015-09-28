@@ -1,2 +1,2 @@
 #!/bin/bash
-npm ls -g | grep '^[└├]'
+npm list -g | grep -E '^(\+--|`--)'
