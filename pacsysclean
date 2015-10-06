@@ -2,4 +2,4 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-expac '%m %n' | sort -g -k1
+expac --humansize M '%m %n' | sort -g -k1
