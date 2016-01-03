@@ -6,5 +6,5 @@ IFS=$'\n\t'
 # just for arch linux...
 
 echo "==> updating pacman's mirrorlist with newly ranked mirrors"
-reflector --verbose -l 200 -p http --sort rate --save /etc/pacman.d/mirrorlist
+sudo reflector --verbose -l 200 -p http --sort rate --save /etc/pacman.d/mirrorlist
 
