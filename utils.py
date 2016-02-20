@@ -1,0 +1,8 @@
+from subprocess import getoutput
+
+def make_set(cmd, sep="\n"):
+    """makes a set of the outputs of cmd, splitting on sep"""
+    out = getoutput(cmd)
+    elements = out.split(sep)
+    return set(elements)
+

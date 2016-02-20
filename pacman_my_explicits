@@ -1,12 +1,8 @@
 #!/usr/bin/env python
 
 # Lists the exlicti
-from subprocess import getoutput
 
-def make_set(cmd):
-    out = getoutput(cmd)
-    elements = out.split("\n")
-    return set(elements)
+from utils import make_set
 
 essentials = make_set("pacman -Qq --groups base base-devel")
 explicits = make_set("pacman -Qq --explicit")
