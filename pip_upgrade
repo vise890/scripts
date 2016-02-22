@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+
+from subprocess import getoutput
+
+def lines(s):
+    return s.split("\n")
+
+def pkg_name(pkg_line):
+    return pkg_line.split(" ")[0]
+
+
+outdated_user_pkgs_lines = lines(getoutput("pip list --user --outdated"))
+outdated_user_pkgs = [pkg_name(pl) for pl in outdated_user_pkgs_lines]
+
+print("==> Upgrading all teh things!")
+getoutput("pip upgrade --user " + " ".join(outdated_user_pkgs))
