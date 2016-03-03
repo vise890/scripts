@@ -1,0 +1,5 @@
+#!/bin/bash
+
+DUMP_PATH="$HOME/.config/dconf/user.dump.txt"
+echo "==> dumping dconf to $DUMP_PATH"
+dconf dump / > "$DUMP_PATH"
