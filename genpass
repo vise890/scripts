@@ -1,12 +1,8 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env bash
 
-require 'securerandom'
+pass=$(pwgen -1 --ambiguous --capitalize --numerals --secure --symbols 15)
 
-require 'clipboard'
+echo "$pass"
 
-pass = `pwgen -1 --ambiguous --capitalize --numerals --secure --symbols 15`
-
-puts pass
-
-Clipboard.copy pass
-puts "==> Password copied to clipboard"
+echo -n "$pass" | xclip -selection clipboard
+echo "==> Password copied to clipboard"
