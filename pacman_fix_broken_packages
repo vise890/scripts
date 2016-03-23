@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 from subprocess import getoutput
 import os
+import sys
 
 cmd = " | ".join([
     "sudo pacman -Qk 2> /dev/null",
@@ -12,7 +13,10 @@ out = getoutput(cmd)
 def pkg_name(pkg_line):
     return pkg_line.split(":")[0]
 
-broken_packages = [pkg_name(pkg_line) for pkg_line in out.split("\n")]
+broken_packages = [pkg_name(pkg_line) for pkg_line in out.split("\n") if pkg_name(pkg_line) != '']
+
+if not broken_packages:
+    sys.exit()
 
 print("==> found broken packages:\n", broken_packages)
 
