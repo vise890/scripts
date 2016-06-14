@@ -1,0 +1,3 @@
+#!/bin/bash
+
+primusrun atom --ignore-gpu-blacklist --disable-gpu-sandbox
