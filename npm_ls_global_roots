@@ -1,2 +1,2 @@
 #!/bin/bash
-npm list -g | grep -E '^(\+--|`--)'
+npm list -g | grep -E '^(\+--|`--)' | sed -e 's/^\s//g' | sed -e 's/[\+\-]*//g' | sed -e 's/@[\-\d\.]*//g' | sed -e 's/`//g'
