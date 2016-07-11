@@ -1,5 +1,14 @@
 #!/bin/env ruby
 
+# Script to steal stuff from other users:
+# usage:
+# $ steal unsuspecting-other-user path/starting/from/their/home
+#
+
+# I use this to copy stuff between my personal and work users. But "steal"
+# sounded  like a fun name
+
+
 require 'pathname'
 
 `sudo -v`
