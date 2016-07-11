@@ -1,0 +1,19 @@
+#!/bin/env ruby
+
+require 'pathname'
+
+`sudo -v`
+
+source_user = ARGV[0]
+source_path = ARGV[1]
+
+puts "==> stealing #{source_path} from #{source_user}"
+
+puts "-> copying"
+`sudo cp -R /home/#{source_user}/#{source_path} ./`
+
+puts "-> chowning"
+source_basename = Pathname.new(source_path).basename
+target_user = `id -u`.chomp
+target_group = `id -g`.chomp
+`sudo chown -R #{target_user}:#{target_group} ./#{source_basename}`
