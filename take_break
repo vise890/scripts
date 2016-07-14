@@ -1,3 +1,2 @@
 #!/bin/bash
-export DISPLAY=:0.0
-i3lock --dpms --ignore-empty-password --show-failed-attempts --image=$HOME/Pictures/break.png
+i3lock --ignore-empty-password --show-failed-attempts --image=$HOME/Pictures/break.png
