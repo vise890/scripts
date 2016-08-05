@@ -1,0 +1,3 @@
+#!/bin/bash
+
+find ./ -iname '*.hs' -exec stylish-haskell -i {} \;
