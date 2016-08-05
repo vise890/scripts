@@ -1,6 +1,6 @@
 rmdir warns if unstaged/unupshed git stuff
 (A) move all notes/snippets into here
 preserve mixed case or fully uppercase tokens in renaming
-don't touch .files
-add password generation script
+
+x add password generation script
 (A) CLIP: a platform independent clipper
