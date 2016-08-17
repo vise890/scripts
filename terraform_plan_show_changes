@@ -1,0 +1,18 @@
+#!/bin/env ruby
+
+
+
+def changed?(str)
+  values = /\s*["]([\w:]*)["]\s*=>\s*["]([\w:]*)["]\s*/
+  values.match(str)
+
+  original_value = $1
+  new_value = $2
+
+  original_value != new_value
+end
+
+out = `terraform plan`
+
+puts out.lines.select { |l| changed?(l) }.join("\n")
+
