@@ -1,0 +1,8 @@
+#!/bin/bash
+
+date > ./.trigger_ci
+
+git add ./.trigger_ci
+
+git commit -m 'trigger ci'
+git push
