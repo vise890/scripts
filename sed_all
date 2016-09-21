@@ -1,0 +1,11 @@
+#!/bin/ruby
+
+original = ARGV[0]
+replacement = ARGV[1]
+
+
+if [original, replacement].any?(&:nil?)
+  raise ArgumentError("Usage sed_all <original> <replacement>")
+else
+  puts `find ./ -type f -exec sed --in-place --expression "s/#{original}/#{replacement}/g" {} \\;`
+end
