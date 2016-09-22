@@ -1,5 +1,7 @@
 #!/bin/bash
 
+git pull --rebase
+
 date > ./.trigger_ci
 
 git add ./.trigger_ci
