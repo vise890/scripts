@@ -7,13 +7,14 @@
 require 'pathname'
 
 dir_to_split = Pathname.new(ARGV[0])
+n_files = ARGV[1].to_i || 50_000
 
 files = Dir.entries(dir_to_split).map{ |p| dir_to_split.join(p).realpath }
 
 `mkdir -p partitions`
 
 idx = 0
-files.each_slice(50_000) { |fs|
+files.each_slice(n_files) { |fs|
   partition_dir = "./partitions/#{idx}"
   idx += 1
   Dir.mkdir(partition_dir)
