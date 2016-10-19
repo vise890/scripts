@@ -1,0 +1,9 @@
+#!/bin/ruby
+# concat all files in dir into a single file (output)
+
+dir = ARGV[0]
+
+raise ArgumentError if dir.nil?
+
+puts `find #{dir} -type f -exec cat {} \;`
+
