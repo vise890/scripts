@@ -1,9 +1,7 @@
-#!/bin/ruby
+#!/bin/bash
 # concat all files in dir into a single file (output)
 
-dir = ARGV[0]
+dir=$1
 
-raise ArgumentError if dir.nil?
-
-puts `find #{dir} -type f -exec cat {} \;`
+find $1 -type f -exec cat {} \;
 
