@@ -1,9 +1,0 @@
-#!/bin/bash
-
-for _ in {1..10}; do
-  vim
-done
-
-# Now, every time vim opens, practice :wqa
-
-echo "==> You have progressed towards enlightenment"
