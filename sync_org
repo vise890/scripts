@@ -2,11 +2,11 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-export GIT_COMMITTER_NAME="cRoN"
-export GIT_COMMITTER_EMAIL="cRoN@cron.org"
+export GIT_COMMITTER_NAME="RoBotron-2000"
+export GIT_COMMITTER_EMAIL="RoBotron-2000@cron.org"
 
-export GIT_AUTHOR_NAME="cRoN"
-export GIT_AUTHOR_EMAIL="cRoN@cron.org"
+export GIT_AUTHOR_NAME="RoBotron-2000"
+export GIT_AUTHOR_EMAIL="RoBotron-2000@cron.org"
 
 (
   cd "$HOME/org" || exit
