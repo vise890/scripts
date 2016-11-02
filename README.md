@@ -6,16 +6,8 @@ A bunch of utilities to perform boring chores
 
 Most scripts are for my personal use.
 
-Anyway some of them require these environment variables to be set:
 
-- `CODEPATH`
-- `ORGPATH`
+## NOTE
 
-The `$ORGPATH` points to a directory structured like this:
-
-```
-.
-└── todo # the todo.txt dir
-```
-
-
+quite a few of them could be better as shell aliases. But i don't wanna pollute
+my [pristine dotfiles](https://github.com/vise890/dotfiles)...
