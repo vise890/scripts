@@ -1,0 +1,7 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+grep '@someday' "$TODO_TXT_DIR/todo.txt" >> "$TODO_TXT_DIR/someday-maybe.txt"
+
+sed -i '/@someday/d' "$TODO_TXT_DIR/todo.txt"
