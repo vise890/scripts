@@ -2,6 +2,7 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-grep '@someday' "$TODO_DIR/todo.txt" >> "$TODO_DIR/someday-maybe.txt"
+source "todotxt.sh"
 
-sed -i '/@someday/d' "$TODO_DIR/todo.txt"
+archive_someday
+
