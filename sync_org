@@ -14,10 +14,9 @@ export GIT_AUTHOR_EMAIL="$user@$hostname"
 (
   cd "$HOME/org" || exit
 
-  git pull || true
-  git push origin master || true
+  git pull --quiet
 
   git add .
   git commit -m 'sync'
-  git push origin master
+  git push --porcelain origin master
 )
