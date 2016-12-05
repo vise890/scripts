@@ -6,3 +6,5 @@ mkdir -p ~/bin
   chmod +x boot
 )
 
+boot
+
