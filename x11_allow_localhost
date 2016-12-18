@@ -1,0 +1,3 @@
+#!/bin/bash
+# allow all users to open windows on my screen
+xhost +localhost &
