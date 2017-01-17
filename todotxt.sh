@@ -2,15 +2,14 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-cwd_todotxt="$(pwd)/todo.txt"
-cwd_donetxt="$(pwd)/done.txt"
-cwd_somedaytxt="$(pwd)/someday.txt"
-
 export global_todotxt="$TODO_DIR/todo.txt"
 export global_donetxt="$TODO_DIR/done.txt"
 export global_somedaytxt="$TODO_DIR/someday.txt"
 
+cwd_todotxt="$(pwd)/todo.txt"
 if [ -e "$cwd_todotxt" ]; then
+  cwd_donetxt="$(pwd)/done.txt"
+  cwd_somedaytxt="$(pwd)/someday.txt"
   todotxt=$cwd_todotxt
   donetxt=$cwd_donetxt
   somedaytxt=$cwd_somedaytxt
