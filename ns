@@ -1,0 +1,15 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+
+function new_script () {
+  local script_name=$1
+  local script_path="$HOME/Code/scripts/$script_name"
+  echo "#!/bin/bash
+set -euo pipefail
+IFS=\$'\\n\\t'" >> "$script_path"
+  chmod +x "$script_path"
+}
+
+new_script "$1"
