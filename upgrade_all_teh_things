@@ -1,0 +1,26 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+sudo -v
+echo "==> full sys upgrade (pacman)"
+sudo pacman -Syu --noconfirm
+
+echo "==> full AUR upgrade (pacaur)"
+pacaur -Syu --noedit --noconfirm
+
+echo "==> npm update"
+npm update --global
+
+echo "==> pip (python) update"
+./pip_upgrade.sh
+
+
+echo "==> update tldr docs"
+tldr --update
+
+echo "==> update oh-my-zsh"
+upgrade_oh_ms_zsh
+
+echo "==> update scm breeze"
+update_scm_breeze
