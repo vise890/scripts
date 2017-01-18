@@ -22,4 +22,5 @@ then
   exit 1
 else
   new_script "$1"
+  "$EDITOR" "$script_path"
 fi
