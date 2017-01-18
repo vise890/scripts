@@ -19,8 +19,8 @@ echo "==> pip (python) update"
 echo "==> update tldr docs"
 tldr --update
 
-echo "==> update oh-my-zsh"
-upgrade_oh_ms_zsh
+#echo "==> update oh-my-zsh"
+#upgrade_oh_ms_zsh
 
-echo "==> update scm breeze"
-update_scm_breeze
+#echo "==> update scm breeze"
+#update_scm_breeze
