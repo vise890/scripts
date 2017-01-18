@@ -16,11 +16,9 @@ EOF
 
 script_name=$1
 script_path="$HOME/Code/scripts/$script_name"
-if [ -e "$script_path" ]
+if [ ! -e "$script_path" ]
 then
-  echo "fuck you, $script_path already exists! Aborting!"
-  exit 1
-else
-  new_script "$1"
-  "$EDITOR" "$script_path"
+  new_script "$script_path"
 fi
+
+"$EDITOR" "$script_path"
