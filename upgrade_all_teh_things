@@ -2,6 +2,8 @@
 set -euo pipefail
 IFS=$'\n\t'
 
+LOCATION="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 sudo -v
 echo "==> full sys upgrade (pacman)"
 sudo pacman -Syu --noconfirm
@@ -13,8 +15,7 @@ echo "==> npm update"
 npm update --global
 
 echo "==> pip (python) update"
-./pip_upgrade.sh
-
+"$LOCATION/pip_upgrade.sh"
 
 echo "==> update tldr docs"
 tldr --update
