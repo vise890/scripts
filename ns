@@ -10,6 +10,7 @@ function new_script () {
 #!/bin/bash
 set -euo pipefail
 IFS=$'\n\t'
+
 EOF
   chmod +x "$script_path"
 }
