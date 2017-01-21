@@ -1,0 +1,10 @@
+#!/bin/bash
+
+gitignores=$(find ./ -type f -iname '.gitignore')
+
+for gitignore_path in $gitignores
+do
+  gitignore_dir="$(dirname "$gitignore_path")/"
+  blank_or_comment='/^#?\s*$/'
+  awk "$blank_or_comment {next;} {print \"$gitignore_dir\" \$0}" "$gitignore_path"
+done
