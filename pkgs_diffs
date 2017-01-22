@@ -2,11 +2,10 @@
 set -euo pipefail
 IFS=$'\n\t'
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 my_explicits=$(pacman_my_explicits | sort -u)
-pkgs_files_in_cwd=$(find ./ -type f -iname '*.pkgs')
-
-pkgs=$(echo "$pkgs_files_in_cwd" | xargs cat| tr ' ' '\n' | sort -u)
+pkgs=$("$DIR/pkgs_in_cwd")
 
 comm -3 <(echo "$pkgs") <(echo "$my_explicits")
 
