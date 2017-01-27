@@ -1,3 +1,0 @@
-#!/bin/bash
-
-todotxt-machine "${TODO_DIR}/todo.txt" "${TODO_DIR}/done.txt"
