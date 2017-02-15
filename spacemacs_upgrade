@@ -1,9 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-IFS=$'\n\t'
-
-cd ~/.emacs.d
-
-git pull --rebase
-git submodule sync
-git submodule update
