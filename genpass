@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-pass=$(pwgen -1 --ambiguous --capitalize --numerals --secure --symbols 15)
+pass=$(pwgen -1 --capitalize --numerals --secure --ambiguous 18)
 
 echo "$pass"
 
