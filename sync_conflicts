@@ -3,4 +3,4 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-find ~/Sync -iname '*sync-conflict*'
+find ~/ -iname '*sync-conflict*'
