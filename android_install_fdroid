@@ -1,0 +1,9 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+echo "==> updating repos"
+fdroidcl update
+
+echo "==> installing fdroid"
+fdroidcl install org.fdroid.fdroid

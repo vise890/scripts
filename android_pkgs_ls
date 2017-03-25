@@ -1,0 +1,7 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+# lists 3rd party pakgs installed on connected device
+
+adb shell 'pm list packages -3' | sed 's/package://g'
