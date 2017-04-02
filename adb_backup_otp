@@ -2,4 +2,6 @@
 set -euo pipefail
 IFS=$'\n\t'
 
+# from https://rizvir.com/articles/two-factor-auth-android-backup/
+
 adb backup -f freeotp.bak org.fedorahosted.freeotp
