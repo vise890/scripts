@@ -1,0 +1,15 @@
+#!/bin/bash
+set -eo pipefail
+IFS=$'\n\t'
+
+bak_file=$1
+if [ -z "$bak_file" ]; then
+  echo "==> You need to specify freeotp bak file"
+  echo "... it's what you get from the adb_backup_otp script"
+  exit 1
+fi
+
+set -u
+
+adb restore "$bak_file"
+

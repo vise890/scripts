@@ -1,0 +1,5 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+adb backup -f freeotp.bak org.fedorahosted.freeotp
