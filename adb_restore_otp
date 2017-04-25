@@ -2,10 +2,20 @@
 set -eo pipefail
 IFS=$'\n\t'
 
+function vise_cmd {
+  echo " -> if you use the Vise Enterprise File System Structure you may want:"
+  vise_cmd="adb_restore_otp <(gpg --decrypt Documents/secrets/freeotp.bak.gpg..pass=abc)"
+  echo "$vise_cmd"
+  echo -n "$vise_cmd" | xclip -selection clipboard
+  echo " -> I've copied it in the clipboard for you, Sir."
+}
+
 bak_file=$1
 if [ -z "$bak_file" ]; then
   echo "==> You need to specify freeotp bak file"
   echo "... it's what you get from the adb_backup_otp script"
+  vise_cmd
+
   exit 1
 fi
 
