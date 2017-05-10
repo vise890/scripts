@@ -2,9 +2,8 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-LOCATION="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
 sudo -v
+
 echo "==> full sys upgrade (pacman)"
 sudo pacman -Syu --noconfirm
 
@@ -15,13 +14,23 @@ echo "==> npm update"
 npm update --global
 
 echo "==> pip (python) update"
+LOCATION="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 "$LOCATION/pip_upgrade.sh"
 
 echo "==> update tldr docs"
 tldr --update
 
+export ZSH=$HOME/.oh-my-zsh
+
 #echo "==> update oh-my-zsh"
 #upgrade_oh_ms_zsh
 
 #echo "==> update scm breeze"
+#source "$HOME/.scm_breeze/scm_breeze.sh"
 #update_scm_breeze
+
+echo "==> DONE"
+echo "==> now *you* merge '.pacnew's"
+sudo etc-update
+
+
