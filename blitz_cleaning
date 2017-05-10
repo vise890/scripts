@@ -1,0 +1,11 @@
+#!/bin/python
+"""Prints a random, quick cleaning chore"""
+
+import random
+
+with open('./cleaning.txt', 'r') as cf:
+    CHORES = [c.strip() for c in cf.readlines()]
+
+print("==> Hooray! time to clean! Today you get toooo:\n")
+print(random.choice(CHORES))
+print()
