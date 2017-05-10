@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+URL = ARGV[0]
+
 require 'uri'
 
 def extract_domain(url)
@@ -21,7 +23,6 @@ def get_url(url)
      #{url}`
 end
 
-URL = ARGV[0]
 if URL
   get_url(URL)
 else
