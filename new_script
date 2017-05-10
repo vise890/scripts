@@ -16,7 +16,7 @@ EOF
 }
 
 script_name=$1
-script_path="$HOME/Code/scripts/$script_name"
+script_path="$CODEPATH/scripts/$script_name"
 if [ ! -e "$script_path" ]
 then
   new_script "$script_path"
