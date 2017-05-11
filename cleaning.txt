@@ -1,22 +1,21 @@
-+bathroom counter
-+bathroom mirror
-+bathroom sink
-+bathroom splash guard
-+bathroom wc
-+bedroom +living mirrors
-bed-side-table
+clean +bathroom counter
+clean +bathroom mirror
+clean +bathroom sink
+clean +bathroom splash guard
+clean +bathroom wc
+clean +bedroom +living mirrors
+clean bed-side-table
 demould windows
 empty vacuum cleaner
-fridge shelf x1
-glass table
-+kitchen counter
-+kitchen cupboards
-+kitchen drawer x1
-+kitchen floor
-+kitchen fridge glass shelves
-living room mirror
-microwave
+clean fridge shelf x1
+clean glass table
+clean +kitchen counter
+clean +kitchen cupboards
+clean +kitchen drawer x1
+clean +kitchen floor
+clean +kitchen fridge glass shelves
+clean microwave
 remove carpet stains
 remove wall stains
-room baseboard rims
+clean room baseboard rims
 vacuum
