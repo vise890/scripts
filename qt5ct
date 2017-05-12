@@ -1,0 +1,5 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+QT_QPA_PLATFORMTHEME="qt5ct" qt5ct
