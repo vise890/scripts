@@ -4,7 +4,7 @@ IFS=$'\n\t'
 
 function vise_cmd {
   echo " -> if you use the Vise Enterprise File System Structure you may want:"
-  vise_cmd="adb_restore_otp <(gpg --decrypt Documents/secrets/freeotp.bak.gpg..pass=abc)"
+  vise_cmd="adb_restore_otp <(gpg --decrypt ~/Documents/secrets/freeotp.bak.gpg..pass=abc)"
   echo "$vise_cmd"
   echo -n "$vise_cmd" | xclip -selection clipboard
   echo " -> I've copied it in the clipboard for you, Sir."
