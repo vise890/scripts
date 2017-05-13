@@ -7,5 +7,7 @@ from utils import make_set
 essentials = make_set("pacman -Qq --groups base base-devel")
 explicits = make_set("pacman -Qq --explicit")
 non_base_explicits = explicits.difference(essentials)
+non_base_explicits = list(non_base_explicits)
+non_base_explicits.sort()
 
 print("\n".join(non_base_explicits))
