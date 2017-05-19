@@ -10,6 +10,8 @@ sudo pacman -Syu --noconfirm
 echo "==> full AUR upgrade (pacaur)"
 pacaur -Syu --noedit --noconfirm
 
+echo "==> stack update"
+stack update
 echo "==> npm update"
 npm update --global
 
