@@ -1,25 +1,27 @@
+change sheets
 clean +bathroom counter
 clean +bathroom mirror
 clean +bathroom sink
 clean +bathroom splash guard
 clean +bathroom wc
 clean +bedroom +living mirrors
-clean bed-side-table
-demould windows
-empty vacuum cleaner
-clean fridge shelf x1
-clean glass table
 clean +kitchen counter
 clean +kitchen cupboards
 clean +kitchen drawer x1
 clean +kitchen floor
 clean +kitchen fridge glass shelves
+clean bed-side-table
+clean fridge shelf x1
+clean glass table
 clean microwave
-remove carpet stains
-remove wall stains
 clean room baseboard rims
-vacuum
-declutter drawers
 declutter clothes
 declutter cupboards
+declutter drawers
 declutter nuclear storage
+demould windows
+empty kitchen + bathroom trash
+empty vacuum cleaner
+remove carpet stains
+remove wall stains
+vacuum
