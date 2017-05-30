@@ -1,0 +1,16 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+dpi=$1
+
+echo "==> Setting DPI to: $dpi"
+
+echo "--> setting x11's"
+xrandr --dpi "$dpi"
+
+echo "--> setting xresource's"
+xrdb -merge <(echo "Xft.dpi: $dpi")
+
+echo "==> ok, reporting"
+dpi_reports
