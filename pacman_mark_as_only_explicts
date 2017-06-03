@@ -1,0 +1,18 @@
+#!/usr/bin/env python
+"""
+Marks everything that is *NOT* in stdin
+as non-explicitly installed
+"""
+import sys
+
+from utils import make_set
+import pacman
+
+
+ALL_MY_EXPLICITS = pacman.my_explicits()
+TARGET_EXPLICITS = make_set(sys.stdin.read())
+TARGET_DEPS = ALL_MY_EXPLICITS.difference(TARGET_EXPLICITS)
+
+
+print("==> Marking packages as dependencies")
+pacman.mark_as_deps(TARGET_DEPS)
