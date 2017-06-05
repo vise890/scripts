@@ -15,7 +15,3 @@ xrandr \
 echo "==> set dpi"
 xrandr \
   --dpi 157
-
-echo "==> load xres"
-xrdb ~/.Xresources
-
