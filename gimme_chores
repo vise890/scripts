@@ -1,0 +1,25 @@
+#!/bin/python
+"""Prints a random, quick cleaning / tidying chore"""
+
+import random
+import os
+
+SCRIPT_PATH = os.path.realpath(__file__)
+SCRIPT_DIR = os.path.dirname(SCRIPT_PATH)
+CHORE_TXT_PATH = os.path.join(SCRIPT_DIR, "chores.txt")
+
+
+with open(CHORE_TXT_PATH, 'r') as cf:
+    CHORES = [c.strip() for c in cf.readlines()]
+
+
+def random_els(elements, n=3):
+    """returns n random elements"""
+    els = elements
+    random.shuffle(els)
+    return els[0:n]
+
+
+print("==> Hooray! time to clean! Today you get toooo:\n")
+print("\n".join(random_els(CHORES)))
+print()
