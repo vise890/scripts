@@ -1,5 +1,5 @@
 change +bedroom sheets
-clean +bathroom counter
+clean +bathoom counter
 clean +bathroom mirror
 clean +bathroom shower splash guard
 clean +bathroom sink
@@ -29,3 +29,4 @@ remove carpet stains
 remove wall stains
 start washing machine
 vacuum
+water plants
