@@ -3,13 +3,13 @@ set -euo pipefail
 IFS=$'\n\t'
 
 user=$(whoami)
-disk="6A4F9F9437F85861"
-backup_path="/run/media/$user/$disk/backup/"
+disk="roomy-pod"
+backup_path="/run/media/$user/$disk/backups/"
 
 function backup {
   home_folder_name="$1"
   echo "==> backing up $home_folder_name"
-  rsync -ar \
+  rsync -azr --progress \
     "$HOME/$home_folder_name" \
     "$backup_path/$home_folder_name"
 }
