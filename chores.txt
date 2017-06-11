@@ -1,33 +1,42 @@
-change +bedroom sheets
-clean +bathoom counter
-clean +bathroom mirror
-clean +bathroom shower splash guard
-clean +bathroom sink
-clean +bathroom wc
-clean +bedroom +living mirrors
-clean +bedroom bed-side-table
-clean +kitchen counter
-clean +kitchen cupboards
-clean +kitchen drawer x1
-clean +kitchen floor
-clean +kitchen fridge glass shelves
-clean +kitchen fridge shelf x1
-clean glass table
-clean microwave
-clean room baseboard rims
-clean window x1
-de-hang clothes
-declutter +kitchen cupboard x1
-declutter +kitchen drawer x1
-declutter clothes
-declutter nuclear storage
-empty +bathroom trash
-empty +kitchen trash
-empty vacuum cleaner
-iron 10m
-maintain dishwasher (salt, rinse aid, clean filter)
++bathoom clean counter
++bathroom clean baseboard rims
++bathroom clean floor
++bathroom clean heater
++bathroom clean mirror
++bathroom clean shower splash guard
++bathroom clean sink
++bathroom clean wc
++bathroom empty trash
++bedroom change sheets
++bedroom clean baseboard rims
++bedroom clean bed-side-table
++bedroom clean window x1
++bedroom declutter bed-side table
++bedroom declutter clothes
++bedroom iron 10m
++bedroom +living clean mirrors
++bedroom vacuum around bed
++entrance clean baseboard rims
++entrance clean microwave
++kitchen clean counter
++kitchen clean cupboards
++kitchen clean drawer x1
++kitchen clean floor
++kitchen clean fridge glass shelves
++kitchen clean fridge shelf x1
++kitchen declutter cupboard x1
++kitchen declutter drawer x1
++kitchen declutter nuclear storage
++kitchen empty trash
++kitchen maintain dishwasher (salt, rinse aid, clean filter)
++living clean baseboard rims
++living clean glass table
++living clean window x1
++living de-hang clothes
++living empty vacuum cleaner
++living vacuum behind couches
++living water plants
 remove carpet stains
 remove wall stains
 start washing machine
 vacuum
-water plants
