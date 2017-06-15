@@ -1,7 +1,12 @@
 #!/bin/bash
 # concat all files in dir into a single file (output)
-# (for when cat * chokes because of too many args...)
+
 dir=$1
 
-find $1 -type f -exec cat {} \;
+if [ -z "$dir" ]; then
+  echo "gimme an input dir!"
+  exit 1
+fi
+
+find "$dir" -type f -print0 | xargs --null cat
 
