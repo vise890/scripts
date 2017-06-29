@@ -1,0 +1,38 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+# execs cmd with concat_all output for dir, because of reasons
+
+cmd=$1
+dir=$2
+
+function run_it {
+  cmd=$1
+  dir=$(realpath "$2")
+
+  echo "==> running $cmd on $dir"
+
+  bname=$(basename "$dir")
+  concat_out_file=$(mktemp "/tmp/$bname.XXX")
+  concat_all "$dir" > "$concat_out_file"
+
+  echo "-> concat output of $dir in:"
+  echo "$concat_out_file"
+
+  if time "$cmd" "$concat_out_file" > /dev/null; then
+    echo "ok"
+  else
+    echo "**********************************"
+    echo "==> cmd failed in $dir"
+    echo "**********************************"
+  fi
+  echo ""
+  echo ""
+}
+
+echo "===> cmd: $cmd "
+
+for d in $dir/*/ ; do
+  run_it "$cmd" "$d"
+done

@@ -1,0 +1,8 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+package_name=$(basename "$(pwd)")
+
+stack list-dependencies --test | cut -d ' ' -f1 | xargs | sed "s/$package_name//g"
+
