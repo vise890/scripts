@@ -15,3 +15,6 @@ xrandr \
 echo "==> set dpi"
 xrandr \
   --dpi 157
+
+echo "==> set GDK_DPI_SCALE"
+export GDK_DPI_SCALE=0.5
