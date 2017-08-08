@@ -3,25 +3,34 @@ from subprocess import getoutput
 import os
 import sys
 
-cmd = " | ".join([
-    "sudo pacman -Qk 2> /dev/null",
-    "ag --invert-match '0 missing files$'"
-])
+def get_broken_packages():
 
-out = getoutput(cmd)
+    def pkg_name(pkg_line):
+        return pkg_line.split(":")[0]
 
-def pkg_name(pkg_line):
-    return pkg_line.split(":")[0]
+    cmd = " | ".join([
+        "sudo pacman -Q --check 2> /dev/null",
+        "ag --invert-match '0 missing files$'"
+    ])
 
-broken_packages = [pkg_name(pkg_line) for pkg_line in out.split("\n") if pkg_name(pkg_line) != '']
+    out = getoutput(cmd)
+
+    return [pkg_name(pkg_line) for pkg_line in out.split("\n") if pkg_name(pkg_line) != '']
+
+
+broken_packages = get_broken_packages()
+
 
 if not broken_packages:
     sys.exit()
 
+
 print("==> found broken packages:\n", broken_packages)
+
 
 print("==> Nuking them:\n")
 os.system("sudo pacman -Rdd --noconfirm " + " ".join(broken_packages))
+
 
 print("==> Re-installing:\n")
 os.system("sudo pacman -S --noconfirm " + " ".join(broken_packages))
