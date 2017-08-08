@@ -13,7 +13,7 @@ with open(CHORE_TXT_PATH, 'r') as cf:
     CHORES = [c.strip() for c in cf.readlines()]
 
 
-def random_els(elements, n=3):
+def random_els(elements, n=5):
     """returns n random elements"""
     els = elements
     random.shuffle(els)
