@@ -13,7 +13,7 @@ pacaur -Syu --noedit --noconfirm
 echo "==> stack update"
 stack update
 echo "==> npm update"
-npm install --global npm
+npm update --global npm
 npm update --global
 
 echo "==> pip (python) update"
