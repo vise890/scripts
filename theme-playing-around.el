@@ -1,25 +1,30 @@
 (defun disable-all-enabled-themes ()
   (-map #'disable-theme custom-enabled-themes))
 
+
 (defun not-current? (theme)
   (not (eq (car custom-enabled-themes)
            theme)))
 
-(defun not-subatomic? (theme)
+(defun not-shit? (theme)
   ;; dammit subatomic256!!
-  (not (eq 'subatomic theme)))
+  (not (or (eq 'subatomic theme)
+           (eq 'zonokai theme)
+           (eq 'apropospriate theme)
+           (eq 'hemisu theme)
+           (eq 'solarized theme)
+           (eq 'tao theme))))
+
 
 (defun remaining ()
   (cdr (-drop-while #'not-current?
-                    (-filter #'not-subatomic?
+                    (-filter #'not-shit?
                              (custom-available-themes)))))
-(remaining)
 
 (defun next ()
   (or  (car (remaining))
        (car (custom-available-themes))))
 
-(next)
 
 (defun load-theme! (theme)
   (progn
@@ -36,30 +41,59 @@
   (insert (concat "\n;; "
                   (symbol-name (car custom-enabled-themes)))))
 
+(lambda playground ()
 
-(load-next1)
+  (disable-all-enabled-themes)
+  custom-enabled-themes
+  (remaining)
+  (next)
+  (load-next1)
+
+  (load-theme! 'apropospriate-light)
+
+  )
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (insert-curr-at-point)
 
-;; seti
-soft-charcoal
-tao
-zenburn
-sanityinc-solarized-light
-sanityinc-solarized-dark
-sanityinc-tomorrow-night
-sanityinc-tomorrow-day
-solarized
 darktooth
 farmhouse-light
 firebelly
 gruvbox
+gruvbox-dark-hard
+gruvbox-dark-medium
+gruvbox-dark-soft
+gruvbox-light-soft
 hc-zenburn
 jazz
-majapahit-light
 majapahit-dark
+majapahit-light
+material
+material-light
+minimal
+minimal-light
 molokai
 monokai
+nord
 obsidian
 oldlace
+omtose-softer
+phoenix-dark-pink
+planet
+purple-haze
+sanityinc-solarized-dark
+sanityinc-solarized-light
+sanityinc-tomorrow-day
+sanityinc-tomorrow-night
+seti
+smyx
+soft-charcoal
+solarized
+sunny-day
+tango-plus
+tao
+tao-yin
+twilight-bright
+zenburn
+zonokai-blue
