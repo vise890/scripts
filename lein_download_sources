@@ -4,4 +4,4 @@ IFS=$'\n\t'
 
 lein pom
 mvn dependency:sources
-
+mvn dependency:resolve -Dclassifier=javadoc
