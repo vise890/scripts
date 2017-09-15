@@ -1,0 +1,6 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+lein with-profile misc hiera && xdg-open ./target/ns-hierarchy.png
+

@@ -1,0 +1,6 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+lein with-profile bikeshedding slamhound "./src" "./test" "./user"
+
