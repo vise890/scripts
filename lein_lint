@@ -8,4 +8,5 @@ lein do clean, check
 lein with-profile lint kibit
 lein with-profile lint eastwood
 lein with-profile lint bikeshed -v
+lein with-profile lint yagni -v
 
