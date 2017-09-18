@@ -2,5 +2,5 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-lein with-profile bikeshedding ancient upgrade :interactive
+lein with-profile misc ancient upgrade :interactive
 

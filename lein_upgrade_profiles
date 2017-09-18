@@ -1,4 +1,4 @@
 #!/bin/bash
 
-lein with-profile bikeshedding ancient upgrade-profiles :interactive
+lein with-profile misc ancient upgrade-profiles :interactive
 

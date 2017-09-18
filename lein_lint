@@ -5,7 +5,7 @@ IFS=$'\n\t'
 # NOTE: can't put it all in the `do` or it won't run them
 #       all if something fails
 lein do clean, check
-lein with-profile bikeshedding kibit
-lein with-profile bikeshedding eastwood
-lein with-profile bikeshedding bikeshed -v
+lein with-profile lint kibit
+lein with-profile lint eastwood
+lein with-profile lint bikeshed -v
 
