@@ -1,6 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-IFS=$'\n\t'
-
-rm -r ~/.cache/gnome-control-center/backgrounds
-ln -s ~/Pictures/wallpapers/ ~/.cache/gnome-control-center/backgrounds

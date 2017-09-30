@@ -1,7 +1,0 @@
-#!/bin/bash
-set -uo pipefail
-IFS=$'\n\t'
-
-lein with-profile misc cljfmt fix "./src" "./test"
-lein with-profile misc cljfmt fix "./user"
-

@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-#pass=$(pwgen -1 --capitalize --numerals --secure --ambiguous 18)
-pass=$(apg -m 20 -n 1 -M NCs)
-
-echo "$pass"
-
-echo -n "$pass" | xclip -selection clipboard
-echo "==> Password copied to clipboard"

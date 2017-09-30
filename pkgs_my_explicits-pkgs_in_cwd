@@ -1,3 +1,0 @@
-#!/bin/bash
-
-comm -23 <(pacman_my_explicits | sort) <(pkgs_in_cwd | sort)

@@ -1,6 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-IFS=$'\n\t'
-
-lein with-profile lint slamhound "./src" "./test" "./user"
-

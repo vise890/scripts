@@ -1,5 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-IFS=$'\n\t'
-
-pacman -Qqn | xargs sudo pacman -S --noconfirm --force

@@ -1,9 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-IFS=$'\n\t'
-
-pkgs_files_in_cwd=$(find ./ -type f -iname '*.pkgs')
-pkgs=$(echo "$pkgs_files_in_cwd" | xargs cat| tr ' ' '\n' | sort -u)
-
-echo "$pkgs"
-

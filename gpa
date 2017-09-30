@@ -1,4 +1,0 @@
-#!/bin/bash
-git add .
-git commit -m 'commit all teh things!'
-git push

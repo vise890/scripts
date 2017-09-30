@@ -1,6 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-IFS=$'\n\t'
-
-# http://gparted-forum.surf4.info/viewtopic.php?id=17446
-xhost +local:

@@ -1,6 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-IFS=$'\n\t'
-
-echo "==> nuking all docker images. commencing"
-sudo docker rmi --force $(docker images -q)

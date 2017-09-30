@@ -1,5 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-IFS=$'\n\t'
-
-expac --humansize M '%m %n' | sort -g -k1

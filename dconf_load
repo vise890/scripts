@@ -1,5 +1,0 @@
-#!/bin/bash
-
-DUMP_PATH="$HOME/.config/dconf/user.dump.txt"
-echo "==> loading dump from $DUMP_PATH"
-dconf load / < "$DUMP_PATH"

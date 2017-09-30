@@ -1,4 +1,0 @@
-#!/bin/bash
-
-# for bumblebee
-optirun -b none nvidia-settings -c :8

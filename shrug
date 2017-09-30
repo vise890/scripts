@@ -1,8 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-IFS=$'\n\t'
-
-shrug="¯\\_(ツ)_/¯"
-
-echo "$shrug" |  xclip -selection clipboard
-echo "$shrug"

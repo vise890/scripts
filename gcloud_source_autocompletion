@@ -1,6 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-IFS=$'\n\t'
-
-source /opt/google-cloud-sdk/completion.zsh.inc
-

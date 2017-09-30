@@ -1,4 +1,0 @@
-#!/bin/bash
-
-lein with-profile misc ancient upgrade-profiles :interactive
-

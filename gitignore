@@ -1,5 +1,0 @@
-#!/bin/ruby
-
-target = ARGV[0]
-
-puts `curl --silent https://www.gitignore.io/api/#{target}`

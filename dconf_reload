@@ -1,4 +1,0 @@
-#!/bin/bash
-
-bash dconf_nuke
-bash dconf_load

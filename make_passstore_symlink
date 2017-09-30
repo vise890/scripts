@@ -1,5 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-IFS=$'\n\t'
-
-ln -s ~/Documents/secrets/password-store ~/.password-store

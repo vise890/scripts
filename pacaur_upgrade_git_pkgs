@@ -1,7 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-IFS=$'\n\t'
-
-git_pkgs=$(pacman -Qqm | grep "git")
-pacaur -S --noedit --noconfirm $git_pkgs
-
