@@ -1,0 +1,7 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+cat "$TODO_DIR/todo"* | sponge | sort -u > "$TODO_DIR/todo.txt"
+rm "$TODO_DIR"/*sync-conflict*
+
